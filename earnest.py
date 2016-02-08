@@ -32,4 +32,12 @@ def verify_pricing( items_p, state_p, price_given ):
     else:
         print 'price given, %d, is correct' % price_given
 
-
+if __name__ == "__main__":
+    items_to_buy = [('zebra',3),('lion',2)]
+    state = 'ca'
+    price_given = 80
+    verify_pricing( items_to_buy, state, price_given )
+    price_given = 85
+    verify_pricing( items_to_buy, state, price_given )
+    items_to_buy = [('zebra',3),('lion',200)]
+    verify_pricing( items_to_buy, state, price_given )
